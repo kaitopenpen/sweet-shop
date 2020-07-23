@@ -1,0 +1,20 @@
+<div class="d-flex align-items-center mt-4 mb-4">
+    <div class="ml-auto posts_button">
+        <%= link_to '投稿一覧', sweet_path, class: "btn btn-outline-info" %>
+        <%= link_to '編集', edit_sweet_path(@sweet), class: "btn btn-outline-info" %>
+    </div>
+</div>
+
+<div class="card">
+  <div class="card-header bg-info text-white">
+      <h4><%= @sweet.name %></h4>
+  </div>
+  <div class="card-body">
+      <p class="card-text">値段　：<%= @sweet.price %></p>
+  </div>
+  <div class="card-body">
+      <p class="card-text">ジャンル　：<%= @sweet.genre %></p>
+  </div>
+  
+  
+</div>

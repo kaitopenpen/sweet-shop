@@ -1,0 +1,19 @@
+<div class="d-flex align-items-center">
+  <h1>投稿</h1>
+  <div class="ml-auto posts_button">
+      <a class="btn btn-outline-info" href="/sweets">投稿一覧</a>
+  </div>
+</div>
+<%= form_for @sweet do |f| %>
+    
+        
+    <h3>投稿する</h3>
+    <p>name<input type="text" name="name"></p>
+    <p>price<input type="text" name="price"></p>
+    <p>genre<input type="text" name="genre"></p>
+    
+    
+    
+    <%= f.submit '投稿', class: 'btn btn-info btn-block' %>
+    
+<% end %>

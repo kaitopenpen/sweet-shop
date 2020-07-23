@@ -1,0 +1,31 @@
+<div class="d-flex align-items-center">
+  <h1>投稿</h1>
+  <div class="ml-auto posts_button">
+      <a class="btn btn-outline-info" href="/sweets/new">投稿する</a>
+  </div>
+</div>
+<table class="table table-bordered border-primary table-hover table-sm posts_table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col" style="width: 40px">No.</th>
+      <th scope="col">商品名</th>
+      <th scope="col">値段</th>
+      <th scope="col">投稿日</th>
+      <th scope="col">更新日時</th>
+      <th scope="col">削除</th>
+    </tr>
+  </thead>
+  <tbody>
+　　　
+      <% @sweet.each do |sweet| %>
+        <tr>
+            <th><%= sweet.id %></th>
+            <th><%= link_to(sweet.name, "sweets/#{sweet.id}") %></th>
+            <td><%= sweet.price %></td>
+            <td><%= sweet.created_at %></td>
+            <td><%= sweet.updated_at %></td>
+            <td><%= link_to "削除" , sweet, class: 'btn btn-outline-info', method: :delete %></td>
+        </tr>
+      <% end %>
+  </tbody>
+</table>

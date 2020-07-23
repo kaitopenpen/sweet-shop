@@ -1,0 +1,12 @@
+<div class="d-flex align-items-center">
+  <h1>編集</h1>
+
+</div>
+<%= form_for @sweet do |f| %>
+    <p>name<input type="text" name="name"></p>
+    <p>price<input type="text" name="price"></p>
+    <p>genre<input type="text" name="genre"></p>
+    
+    <%= f.submit '投稿', class: 'btn btn-info btn-block' %>
+    
+<% end %>
