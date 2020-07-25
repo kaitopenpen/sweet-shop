@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   end
   
   
-  root 'sweets#index2'
+
   
   
 end
