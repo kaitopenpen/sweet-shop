@@ -16,5 +16,23 @@
       <p class="card-text">ジャンル　：<%= @sweet.genre %></p>
   </div>
   
+  <h2>コメント一覧</h2>
+<% @reviews.each do |review| %>
+  <div>
+    <%= review.point %>
+    <%= review.content %>
+    <hr>
+  </div>
+<% end %>
+
+
+<%= form_for @review, url: sweet_reviews_path(params[:id]) do |f| %>
+  <h3>レビュー</h3>
+    <%= f.text_field :point %>
+    <%= f.text_field :content %>
+    <%= f.submit %>
+<% end %>
+  
+  
   
 </div>

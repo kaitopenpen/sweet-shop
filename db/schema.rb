@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200723191237) do
+ActiveRecord::Schema.define(version: 20200723232326) do
+
+  create_table "reviews", force: :cascade do |t|
+    t.integer "point"
+    t.string "content"
+    t.integer "sweet_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["sweet_id"], name: "index_reviews_on_sweet_id"
+  end
 
   create_table "sweets", force: :cascade do |t|
     t.string "name"

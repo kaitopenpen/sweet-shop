@@ -1,0 +1,6 @@
+<%= form_for [@sweet, @review] do |f| %>
+  <h3>レビュー</h3>
+    <p>評価点<input type="text" name="point"></p>
+    <p>コメント<input type="text" name="content"></p>
+  <%= f.submit 'レビューする', class: 'btn btn-info btn-block' %>
+<% end %>

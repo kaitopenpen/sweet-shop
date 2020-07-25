@@ -2,6 +2,9 @@ class SweetsController < ApplicationController
   def index
     @sweet = Sweet.all.order(created_at: :desc)
   end
+  
+
+  
   def new
     @sweet = Sweet.new
   end
@@ -15,6 +18,9 @@ class SweetsController < ApplicationController
   
   def show
     @sweet = Sweet.find(params[:id])
+    @reviews = @sweet.reviews
+    @review = Review.new
+    
   end
   
     def edit
